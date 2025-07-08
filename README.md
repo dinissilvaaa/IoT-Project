@@ -76,15 +76,6 @@ The system simulates a smart environment where several sensors and actuators sen
 
 ---
 
-## 🧠 Why I did this
-
-- To put IoT concepts into practice
-- To combine real electronics with web technologies
-- To learn how devices communicate with a web server
-- To organize my code in a clear and commented way
-
----
-
 ## 📚 Author
 
 Made by **Dinis Silva**, 18 years old, from 🇵🇹 Portugal.  
