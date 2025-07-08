@@ -1,102 +1,92 @@
 # 🌐 Smart Environment Monitoring Dashboard
 
-A **real-time interactive dashboard** integrated with an **API** to monitor environmental sensors and control actuators dynamically. This project was developed as part of my final work in the subject of **Information Technologies**.
+This project is a real-time dashboard connected to an API that shows the values of different sensors and controls actuators automatically. I developed it as part of my final project for the subject **Tecnologias da Informação** (Information Technologies).
 
-## 📌 Project Overview
+## 📌 What does it do?
 
-This system simulates a smart environment where multiple sensors and actuators communicate with a central API. The **dashboard** provides a live view of the current sensor readings and actuator states, while also offering a **history section with graphs** to visualize trends over time.
+The system simulates a smart environment where several sensors and actuators send and receive data through a PHP API. The dashboard shows the current values live and also has a history page with graphs to see how things changed over time.
 
 ### 🔧 Main Features
 
-- **Real-time Dashboard**: Displays current values from:
-  - 🌡️ Temperature sensor → Controls an air conditioner (off, heating, cooling)
+- **Live Dashboard** with:
+  - 🌡️ Temperature sensor → Controls an air conditioner (off, heat, cold)
   - 💧 Humidity sensor → Controls a fan (off, medium, max)
   - 🅿️ Parking sensor → Controls a parking sign (available, full)
 
-- **Actuator Visualization**: Dashboard updates based on logic tied to sensor thresholds.
+- **Automatic Actuator Control** based on sensor values
 
-- **History and Graphs**: View detailed logs and line/bar charts of past sensor and actuator values.
+- **History and Graphs** using logs stored in `.txt` files
 
-- **API Integration**:
-  - Sensors send data to a PHP-based API (`api.php`)
-  - The dashboard fetches and visualizes this data
-  - The actuator states are also written/read via the API
-  - Files are used to log all actions (`*.txt` format)
+- **API**:
+  - Sensors send values to `api.php`
+  - Dashboard reads values from the API
+  - The API also sends the correct actuator state back to devices
+  - All values are saved in text files
 
-- **Arduino and Raspberry Pi Support**:
-  - 📲 Arduino MKR1000 with WiFi: Reads actuator values from API and controls LEDs
-  - 🍓 Raspberry Pi with Python: Reads online sensor/actuator data and controls buzzer, button and servo motor accordingly
+- **Arduino and Raspberry Pi support**:
+  - 📲 Arduino MKR1000 connects via WiFi, reads actuator state from API, and turns on the right LED
+  - 🍓 Raspberry Pi runs Python code to react to actuator values (buzzer, button, servo)
 
 ---
 
 ## 🧩 Technologies Used
 
 - **Frontend**: HTML, CSS, JavaScript
-- **Backend**: PHP (API & dashboard)
-- **Database**: `.txt` log files (lightweight data logging)
+- **Backend**: PHP (API and dashboard)
+- **Storage**: Text files (`.txt`)
 - **Hardware**:
-  - Arduino MKR1000 (WiFi)
-  - Raspberry Pi (Python + GPIO)
-  - DHT11 sensor (Temperature and Humidity)
-  - HC-SR04 or IR sensor for parking detection
-  - LEDs, Buzzer, Servo Motor
+  - Arduino MKR1000
+  - Raspberry Pi
+  - DHT11 (temperature and humidity)
+  - HC-SR04 or IR sensor (parking)
+  - LEDs, buzzer, servo motor
 
 ---
 
-## 🛠️ How It Works
+## 🛠️ How it works (step by step)
 
-1. **Arduino/Raspberry Pi** collect sensor data.
-2. Devices **POST** sensor values to the **API**.
-3. PHP stores the data in `.txt` files.
-4. Dashboard and historical pages **read the files** to show real-time info and history.
-5. Actuator logic runs on the server, and the result is sent back to the devices (LEDs, buzzers, etc).
-
----
-
-## ⚙️ Setup Instructions
-
-### API + Dashboard
-
-1. Host the project on a PHP-supported server (e.g., XAMPP, WAMP, or remote server).
-2. Make sure folders like `sensores`, `atuadores`, and `logs` are **writable** (`chmod 777` if Linux).
-3. Open `dashboard.php` to view the main interface.
-
-### Arduino
-
-1. Use Arduino IDE.
-2. Load the sketch from `arduino/sketch.ino`.
-3. Replace WiFi credentials and API URL accordingly.
-4. Upload to the MKR1000 board.
-
-### Raspberry Pi
-
-1. Make sure Python and `requests`, `RPi.GPIO`, `cv2` (OpenCV), etc. are installed.
-2. Run the script from `raspberry/main.py`.
-3. The Pi reads remote sensor/actuator states and interacts with buzzer/servo accordingly.
+1. Arduino and Raspberry collect sensor data
+2. They send the data to the API (POST)
+3. The API saves it in `.txt` files
+4. The dashboard reads and shows the latest values
+5. Based on the values, the API decides what the actuator should do
+6. The devices read that info and act (turn on LED, buzzer, etc)
 
 ---
 
-## 🧠 Project Goals
+## ⚙️ How to run it
 
-- Apply concepts of IoT (Internet of Things)
-- Use real-time web technologies with physical devices
-- Combine software and hardware logic
-- Create a readable and maintainable codebase with full comments
+### For the API + Dashboard
+
+1. Use a PHP-compatible server (e.g., XAMPP, WAMP or online hosting)
+2. Give write permissions to the folders `sensores`, `atuadores`, and `logs`
+3. Open `dashboard.php` in your browser
+
+### For Arduino
+
+1. Open the Arduino sketch (in `arduino/sketch.ino`)
+2. Add your WiFi name, password, and API URL
+3. Upload it to your MKR1000 board
+
+### For Raspberry Pi
+
+1. Make sure Python is installed along with `requests`, `RPi.GPIO`, and `cv2`
+2. Run the main script: `python3 raspberry/main.py`
+3. It will read from the API and control the buzzer, button and servo
+
+---
+
+## 🧠 Why I did this
+
+- To put IoT concepts into practice
+- To combine real electronics with web technologies
+- To learn how devices communicate with a web server
+- To organize my code in a clear and commented way
 
 ---
 
-## 📚 Credits
+## 📚 Author
 
-Created by **Dinis Silva**, 18-year-old student from **Portugal** 🇵🇹  
-Final project for the subject **Tecnologias da Informação (TI)**
-
----
-
-## 📫 Contact
-
-- GitHub: [@dinissilvaaa](https://github.com/dinissilvaaa)
-- Email: dinissilva.dev@gmail.com (example)
-- Portfolio: coming soon...
-
----
+Made by **Dinis Silva**, 18 years old, from 🇵🇹 Portugal.  
+Final project for the course **Tecnologias da Informação (TI)**.
 
