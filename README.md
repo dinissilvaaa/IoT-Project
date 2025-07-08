@@ -38,7 +38,7 @@ The system simulates a smart environment where several sensors and actuators sen
   - Arduino MKR1000
   - Raspberry Pi
   - DHT11 (temperature and humidity)
-  - HC-SR04 or IR sensor (parking)
+  - Rocker Switch ( parking )
   - LEDs, buzzer, servo motor
 
 ---
