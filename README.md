@@ -43,31 +43,6 @@ This system simulates a smart environment where multiple sensors and actuators c
 
 ---
 
-## 🖥️ Project Structure
-
-/project-root
-├── dashboard.php # Displays real-time sensor & actuator states
-├── historico1.php # Graphs + history (text file based)
-├── historico2.php # Extended history + individual sensor logs
-├── api.php # Receives data from Arduino/Pi and returns actuator states
-├── sensores/ # Folder with latest sensor values
-├── atuadores/ # Folder with latest actuator values
-├── logs/ # Historical logs for sensors & actuators (.txt)
-├── js/ # Chart libraries (e.g., Chart.js)
-├── arduino/ # Arduino code to send/read data
-└── raspberry/ # Python code to interact with the environment
-
-
----
-
-## 📷 Screenshots
-
-| Dashboard | History & Graphs |
-|----------|------------------|
-| ![Dashboard](screenshots/dashboard.png) | ![Graphs](screenshots/historico.png) |
-
----
-
 ## 🛠️ How It Works
 
 1. **Arduino/Raspberry Pi** collect sensor data.
