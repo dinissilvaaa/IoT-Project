@@ -1,0 +1,171 @@
+/* Remover margens e padding padrão do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Inclui bordas e padding no cálculo do tamanho dos elementos */
+}
+
+/* Definir corpo da página com imagem de fundo e centralização */
+body {
+    font-family: 'Montserrat', sans-serif; /* Define a fonte da página */
+    height: 100vh; /* A altura da página é igual à altura da tela */
+    margin: 0; /* Remove a margem padrão */
+    background-size: cover; /* Faz o fundo cobrir toda a tela */
+    display: flex; /* Usamos flexbox para alinhar o conteúdo */
+    justify-content: center; /* Alinha o conteúdo no centro horizontalmente */
+    align-items: center; /* Alinha o conteúdo no centro verticalmente */
+    position: relative; /* Define a posição como relativa para o posicionamento de elementos */
+    
+    /* Gradiente suave de fundo */
+    background: linear-gradient(to bottom, #a2c2f4, #e4f3fc); /* Gradiente suave */
+}
+
+/* Estilo principal do formulário */
+.AulaForm {
+    background: rgba(255, 255, 255, 0.07); /* Fundo semi-transparente */
+    border-radius: 20px; /* Bordas arredondadas */
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Borda suave */
+    padding: 50px; /* Preenchimento interno do formulário */
+    width: 100%; /* Ocupa 100% da largura disponível */
+    max-width: 500px; /* Largura máxima de 500px */
+    text-align: center; /* Alinha o texto no centro */
+    backdrop-filter: blur(15px); /* Aplica um desfoque no fundo */
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.15); /* Sombra suave ao redor do formulário */
+    animation: fadeIn 1s ease-in-out; /* Animação de fade-in */
+    position: relative; /* Define a posição como relativa */
+    z-index: 1; /* Coloca o formulário acima de outros elementos */
+}
+
+/* Logo no topo do formulário */
+#logo {
+    width: 100px; /* Largura do logo */
+    height: 100px; /* Altura do logo */
+    object-fit: contain; /* Garante que o logo não seja distorcido */
+    margin-bottom: 20px; /* Espaçamento abaixo do logo */
+    animation: slideIn 1s ease-out; /* Animação para o logo */
+}
+
+/* Estilo dos campos de input */
+.form-control {
+    margin-bottom: 20px; /* Espaçamento abaixo do campo de input */
+    padding: 12px 16px; /* Preenchimento interno dos inputs */
+    border-radius: 10px; /* Bordas arredondadas */
+    border: none; /* Remove a borda padrão */
+    background-color: #225D79; /* Cor de fundo azul escuro */
+    color: white; /* Cor do texto */
+    font-size: 16px; /* Tamanho da fonte */
+    padding-left: 40px; /* Espaçamento à esquerda para o ícone */
+    box-shadow: none; /* Remove a sombra padrão */
+}
+
+/* Estilo quando o campo está focado */
+.form-control:focus {
+    box-shadow: 0 0 10px rgba(100, 161, 244, 0.6); /* Sombra suave quando o campo recebe foco */
+    outline: none; /* Remove o contorno do campo */
+}
+
+/* Forçar placeholder branco e visível */
+.form-control::placeholder {
+    color: #ffffff !important; /* Cor branca para o texto do placeholder */
+    opacity: 1 !important; /* Garante que o placeholder seja completamente visível */
+}
+
+/* Botão de login */
+.btn-primary {
+    width: 100%; /* Largura total do botão */
+    padding: 18px; /* Preenchimento interno do botão */
+    font-size: 20px; /* Tamanho da fonte */
+    background-color: #225D79; /* Cor de fundo azul escuro */
+    border: none; /* Remove a borda padrão */
+    border-radius: 12px; /* Bordas arredondadas */
+    color: white; /* Cor do texto */
+    font-weight: bold; /* Negrito no texto */
+    cursor: pointer; /* Altera o cursor ao passar sobre o botão */
+    transition: background-color 0.3s ease; /* Efeito suave para a mudança de cor de fundo */
+}
+
+/* Efeito no botão ao passar o mouse */
+.btn-primary:hover {
+    background-color: #81a8e3; /* Cor mais clara para o botão no hover */
+}
+
+/* Mensagem de erro no login */
+.alert-danger {
+    margin-top: 25px; /* Espaçamento superior para a mensagem de erro */
+    padding: 18px; /* Preenchimento interno da mensagem */
+    background-color: #f8d7da; /* Cor de fundo da mensagem de erro */
+    color: #721c24; /* Cor do texto da mensagem de erro */
+    border: 1px solid #f5c6cb; /* Borda suave em torno da mensagem */
+    border-radius: 12px; /* Bordas arredondadas */
+    font-size: 18px; /* Tamanho da fonte */
+}
+
+/* Container do input e ícone */
+.input-wrapper {
+    position: relative; /* Define a posição como relativa para posicionamento absoluto do ícone */
+    width: 100%; /* Largura total do container */
+}
+
+/* Ícone posicionado dentro do input */
+.input-wrapper i {
+    position: absolute; /* Posiciona o ícone de forma absoluta dentro do input */
+    top: 50%; /* Alinha o ícone verticalmente no meio */
+    left: 12px; /* Alinha o ícone à esquerda */
+    transform: translateY(-50%); /* Centraliza o ícone verticalmente */
+    color: #ccc; /* Cor do ícone */
+    font-size: 16px; /* Tamanho do ícone */
+    pointer-events: none; /* Impede a interação com o ícone */
+}
+
+/* Espaço para o texto não colar ao ícone */
+.input-wrapper .form-control {
+    padding-left: 40px; /* Espaçamento à esquerda para o ícone */
+}
+
+/* Animação de entrada */
+@keyframes fadeIn {
+    0% {
+        opacity: 0; /* Inicialmente invisível */
+        transform: translateY(-20px); /* Deslocado para cima */
+    }
+    100% {
+        opacity: 1; /* Tornando-se visível */
+        transform: translateY(0); /* Retorna para a posição original */
+    }
+}
+
+/* Animação para o logo */
+@keyframes slideIn {
+    0% {
+        opacity: 0; /* Inicialmente invisível */
+        transform: translateX(-50px); /* Deslocado para a esquerda */
+    }
+    100% {
+        opacity: 1; /* Logo se tornando visível */
+        transform: translateX(0); /* Logo se movendo para a posição original */
+    }
+}
+
+/* Ajustes em telas pequenas */
+@media (max-width: 500px) {
+    .AulaForm {
+        padding: 30px; /* Menos padding em telas pequenas */
+    }
+    .form-control {
+        font-size: 16px; /* Tamanho da fonte menor */
+    }
+    .btn-primary {
+        font-size: 18px; /* Tamanho da fonte do botão menor */
+        padding: 14px; /* Menos padding no botão */
+    }
+}
+
+/* Remove fundo do campo de input quando o navegador preenche automaticamente */
+input:-webkit-autofill {
+    background-color: transparent !important; /* Remove o fundo do input preenchido automaticamente */
+    transition: background-color 5000s ease-in-out 0s; /* Garantir a transição de cor de fundo */
+    -webkit-box-shadow: 0 0 0px 1000px #ffffff inset !important; /* Remover sombra do autofill */
+    -webkit-text-fill-color: #000 !important; /* Preenche o texto com cor preta */
+}
+
+  

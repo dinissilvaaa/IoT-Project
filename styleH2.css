@@ -1,0 +1,79 @@
+/* Estilo para o HTML e body, garantindo que a página ocupe toda a altura da tela */
+html, body {
+    height: 100%; /* Garante que o corpo da página ocupe toda a altura da tela */
+    margin: 0;    /* Remove a margem padrão do navegador */
+    padding: 0;   /* Remove o padding padrão do navegador */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Define a fonte padrão da página */
+}
+
+/* Estilizando o corpo da página */
+body {
+    min-height: 100vh; /* Garante que o corpo tenha pelo menos a altura da tela */
+    background: linear-gradient(to bottom, #a2c2f4, #e4f3fc); /* Aplica um gradiente suave de azul para o branco */
+    background-repeat: no-repeat; /* Impede a repetição do fundo */
+    background-attachment: fixed; /* Fixa o fundo no viewport */
+    background-size: cover; /* Faz o fundo cobrir toda a tela */
+    display: flex; /* Usa flexbox para organizar o layout */
+    flex-direction: column; /* Organiza os elementos na direção vertical */
+}
+
+/* Estilo para o título da página */
+h1 {
+    text-align: center; /* Centraliza o título na página */
+    margin-top: 50px; /* Adiciona uma margem superior para afastar o título do topo da página */
+    font-size: 2.5rem; /* Define o tamanho da fonte para o título */
+    color: #343a40; /* Define a cor do título */
+    font-weight: bold; /* Aplica negrito ao título */
+}
+
+/* Estilo para o menu */
+.menu {
+    display: flex; /* Usa flexbox para organizar os itens do menu */
+    flex-direction: column; /* Organiza as opções do menu na direção vertical */
+    align-items: center; /* Centraliza as opções no eixo horizontal */
+    margin-top: 30px; /* Adiciona margem superior ao menu */
+    gap: 20px; /* Adiciona espaçamento entre as opções do menu */
+}
+
+/* Estilo para as opções do menu */
+.opcao {
+    display: inline-block; /* Exibe as opções de menu em linha */
+    text-decoration: none; /* Remove o sublinhado do link */
+    color: #161515; /* Define a cor do texto */
+    background-color: #fcfdfe;  /* Cor de fundo da opção */
+    padding: 15px 30px; /* Define o preenchimento interno da opção */
+    border-radius: 8px; /* Arredonda as bordas da opção */
+    font-size: 1.2rem; /* Define o tamanho da fonte */
+    font-weight: 600; /* Define o peso da fonte */
+    width: 280px; /* Define a largura fixa da opção */
+    text-align: center; /* Centraliza o texto da opção */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Aplica uma sombra suave ao redor da opção */
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s ease-in-out; /* Adiciona transições suaves para os efeitos */
+}
+
+/* Efeito ao passar o mouse sobre a opção */
+.opcao:hover {
+    background-color: #549cea;  /* Muda a cor de fundo para um tom mais escuro */
+    transform: translateY(-5px); /* Move a opção levemente para cima */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Aumenta a sombra para dar o efeito de destaque */
+}
+
+/* Estilo para a barra de navegação (navbar) */
+.navbar {
+    background-color: #ffffff; /* Define a cor de fundo da navbar como branca */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Aplica uma sombra suave ao redor da navbar */
+    border-bottom: 2px solid #e0e0e0; /* Adiciona uma borda inferior fina na navbar */
+}
+
+/* Estilo para a navbar com efeito de desfoque no fundo */
+.navbar {
+    backdrop-filter: blur(8px); /* Aplica um desfoque no fundo da navbar */
+    -webkit-backdrop-filter: blur(8px); /* Aplica o desfoque no Safari (prefixo para webkit) */
+    padding: 1rem 2rem; /* Adiciona espaçamento interno (padding) na navbar */
+    border-radius: 0 0 12px 12px; /* Arredonda as bordas inferiores da navbar */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Aplica uma sombra suave ao redor da navbar */
+    display: flex; /* Usa flexbox para organizar o conteúdo da navbar */
+    justify-content: space-between; /* Distribui os itens da navbar com espaçamento entre eles */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    font-weight: 600; /* Aplica peso de fonte seminegrito */
+}

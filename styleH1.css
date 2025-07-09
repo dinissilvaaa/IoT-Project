@@ -1,0 +1,50 @@
+/* Estilo para o HTML e body, garantindo que a página ocupe toda a altura da tela */
+html, body {
+  height: 100%; /* Garante que o corpo da página ocupe toda a altura da tela */
+  margin: 0;    /* Remove a margem padrão do navegador */
+  padding: 0;   /* Remove o padding padrão do navegador */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Define a fonte padrão da página */
+}
+
+/* Estilizando o corpo da página */
+body {
+  min-height: 100vh; /* Garante que o corpo tenha pelo menos a altura da tela */
+  background: linear-gradient(to bottom, #a2c2f4, #e4f3fc); /* Aplica um gradiente suave de azul para o branco */
+  background-repeat: no-repeat; /* Impede a repetição do fundo */
+  background-attachment: fixed; /* Fixa o fundo no viewport */
+  background-size: cover; /* Faz o fundo cobrir toda a tela */
+  display: flex; /* Usa flexbox para organizar o layout */
+  flex-direction: column; /* Organiza os elementos na direção vertical */
+}
+
+/* Estilo para a tabela */
+.table {
+  background-color: transparent !important; /* Torna o fundo da tabela transparente, com prioridade */
+}
+
+/* Estilo para as células da tabela */
+.table th,
+.table td {
+  background-color: transparent !important; /* Torna o fundo das células transparente */
+  color: #000; /* Ajusta a cor do texto das células para preto */
+  border-color: rgba(0, 0, 0, 0.1); /* Define uma borda discreta e leve para as células */
+}
+
+/* Estilo para o contêiner de conteúdo, caso tenha borda arredondada ou sombra */
+.content {
+  background-color: transparent !important; /* Torna o fundo do conteúdo transparente */
+  box-shadow: none !important; /* Remove qualquer sombra aplicada ao conteúdo */
+}
+
+/* Estilo para a barra de navegação (navbar) */
+.navbar {
+  backdrop-filter: blur(8px); /* Aplica um efeito de desfoque no fundo da navbar */
+  -webkit-backdrop-filter: blur(8px); /* Aplica o desfoque no Safari (prefixo para webkit) */
+  padding: 1rem 2rem; /* Adiciona espaçamento interno (padding) na navbar */
+  border-radius: 0 0 12px 12px; /* Arredonda as bordas inferiores da navbar */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Adiciona uma sombra suave ao redor da navbar */
+  display: flex; /* Usa flexbox para organizar o conteúdo dentro da navbar */
+  justify-content: space-between; /* Distribui os itens na navbar com espaçamento entre eles */
+  align-items: center; /* Alinha os itens da navbar verticalmente no centro */
+  font-weight: 600; /* Aplica um peso de fonte seminegrito */
+}

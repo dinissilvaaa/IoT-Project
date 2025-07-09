@@ -1,0 +1,41 @@
+/* Estiliza o corpo da página */
+body {
+    background-color: #f0f4f8; /* Cor de fundo suave para o corpo */
+    font-family: Arial, sans-serif; /* Define a fonte do corpo como Arial */
+    text-align: center; /* Alinha o texto no centro da página */
+    padding-top: 100px; /* Adiciona espaçamento superior para afastar o conteúdo do topo */
+    
+    /* Gradiente de fundo que vai de azul claro a azul mais escuro */
+    background: linear-gradient(to bottom, #a2c2f4, #e4f3fc); /* Gradiente suave */
+    background-repeat: no-repeat; /* Impede repetição do fundo */
+    background-attachment: fixed; /* Fixa o fundo no viewport (não se move ao rolar a página) */
+    background-size: cover; /* Faz o fundo cobrir toda a tela */
+    
+    display: flex; /* Usa flexbox para organização de layout */
+    flex-direction: column; /* Organiza os elementos na direção vertical */
+}
+
+/* Estilo para o contêiner principal */
+.container {
+    background-color: #ffffff; /* Cor de fundo branco para o contêiner */
+    display: inline-block; /* Exibe o contêiner em linha com outros elementos, se houver */
+    padding: 40px; /* Adiciona preenchimento interno (padding) de 40px */
+    border-radius: 10px; /* Arredonda as bordas do contêiner */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Aplica uma sombra suave ao redor do contêiner */
+}
+
+/* Estilo para o título h1 */
+h1 {
+    color: #333333; /* Cor do título, um tom de cinza escuro */
+}
+
+/* Estilo para os parágrafos p */
+p {
+    color: #555555; /* Cor do texto do parágrafo, um tom mais claro de cinza */
+}
+
+/* Estilo para o timer, destacando-o com a cor azul */
+.timer {
+    font-weight: bold; /* Aplica negrito no texto */
+    color: #007BFF; /* Cor do texto azul */
+}

@@ -1,0 +1,85 @@
+/* Define o estilo geral da página, incluindo o corpo e a estrutura HTML */
+html, body {
+    height: 100%; /* Garante que o corpo da página ocupa toda a altura da tela */
+    margin: 0;    /* Remove a margem */
+    padding: 0;   /* Remove o padding */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Define a fonte do site */
+    padding-bottom: 100px;
+}
+
+/* Define o estilo do corpo da página */
+body {
+    min-height: 100vh; /* Garante que o corpo tenha sempre pelo menos a altura da tela */
+    background: linear-gradient(to bottom, #a2c2f4, #e4f3fc); /* Mete um gradiente de cima para baixo */
+    background-repeat: no-repeat; /* Impede a repetição do fundo */
+    background-attachment: fixed; /* Fixa o fundo no viewport */
+    background-size: cover; /* Faz o fundo cobrir toda a tela */
+    display: flex; /* Usa o flexbox para organizar o layout */
+    flex-direction: column; /* Organiza os elementos na vertical */
+}
+
+/* Definir o estilo para os subtítulos "Sensores" e "Atuadores" */
+h2 {
+    font-size: 2rem; /* Tamanho da fonte para os subtítulos */
+    font-weight: bold; /* Mete em negrito */
+    color: rgb(1, 1, 1); /* Mete as letras pretas */
+    font-family: 'Montserrat', sans-serif; /* Define a fonte */
+    margin-bottom: 10px; /* Espaçamento abaixo */
+}
+
+/* Estilo para os cards da dashboard */
+.card {
+    background: #ffffff; /* Define o fundo dos cartões como branco */
+    border-radius: 16px; /* Bordas arredondadas para os cartões */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Sombra ao redor do cartão */
+    border: none; /* Remove a borda padrão */
+    transition: transform 0.2s ease-in-out; /* Adiciona um efeito de transição ao mover o mouse sobre o cartão */
+    height: 100%; /* Garante que o cartão ocupe toda a altura disponível */
+    display: flex; /* Usando flexbox dentro do cartão */
+    flex-direction: column; /* Organiza o conteúdo do cartão na direção vertical */
+}
+
+/* Efeito ao passar o mouse sobre o cartão (hover) */
+.card:hover {
+    transform: scale(1.02); /* Aumenta levemente o cartão ao passar o mouse sobre ele */
+}
+
+/* Estilo para o cabeçalho e rodapé do cartão (sem fundo e bordas) */
+.card-header,
+.card-footer {
+    background-color: transparent; /* Torna o fundo transparente */
+    border: none; /* Remove as bordas */
+}
+
+/* Estilo para o logo da dashboard */
+.logo-dashboard {
+    width: 80px;  /* Define a largura do logo */
+    height: 80px; /* Define a altura do logo */
+    object-fit: contain; /* Garante que o logo seja ajustado dentro do espaço sem distorção */
+    margin-top: 10px; /* Adiciona um pequeno espaçamento no topo do logo */
+}
+
+/* Estilo para o título "Bem Vindo" na dashboard */
+.titulo-dashboard {
+    font-size: 2.5rem;  /* Tamanho da fonte do título */
+    font-weight: bold;  /* Aplica negrito ao título */
+    color: white;       /* Define a cor do título como branca */
+    font-family: 'Montserrat', sans-serif; /* Define a fonte do título */
+    margin-bottom: 5px; /* Espaçamento abaixo do título */
+    margin-top: 50px;   /* Adiciona uma margem no topo para afastar o título do topo da página */
+}
+
+/* Estilo para a barra de navegação (navbar) */
+.navbar {
+    backdrop-filter: blur(8px); /* Aplica um efeito de desfoque no fundo da navbar */
+    -webkit-backdrop-filter: blur(8px); /* Aplica o desfoque no Safari (prefixo para webkit) */
+    padding: 1rem 2rem; /* Adiciona espaçamento interno (padding) na navbar */
+    border-radius: 0 0 12px 12px; /* Bordas arredondadas no fundo da navbar */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Sombra suave ao redor da navbar */
+    display: flex; /* Usa flexbox para organizar o conteúdo da navbar */
+    justify-content: space-between; /* Alinha os itens ao longo da linha com espaçamento */
+    align-items: center; /* Alinha os itens no centro verticalmente */
+    font-weight: 600; /* Aplica peso de fonte seminegrito */
+}
+
+
